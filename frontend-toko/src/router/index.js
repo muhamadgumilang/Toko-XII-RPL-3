@@ -6,6 +6,7 @@ import LoginView from '../views/LoginView.vue'
 import DashboardView from '../views/DashboardView.vue'
 import ProdukAdminView from '../views/ProdukAdminView.vue'
 import KategoriAdminView from '../views/KategoriAdminView.vue'
+import PelangganAdminView from '@/views/PelangganAdminView.vue'
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -31,7 +32,13 @@ const router = createRouter({
             name: 'admin-kategori',
             component: KategoriAdminView,
             meta: { requiresAuth: true }
-        }
+        },
+          {
+            path: '/admin/pelanggan',
+            name: 'admin-pelanggan',
+            component: PelangganAdminView,
+            meta: { requiresAuth: true}
+          }
     ]
 });
 
